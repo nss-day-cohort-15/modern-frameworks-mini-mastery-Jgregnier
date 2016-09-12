@@ -2,5 +2,14 @@
 
 app.controller("ArrangementCtrl", function ($scope, FlowerFactory) {
 
-  $scope.flowers = FlowerFactory.getArrangements();
+  let flowersArray = [];
+
+  FlowerFactory.getArrangements()
+  .then((data) => {
+    for(let flower in data){
+      flowersArray.push(data[flower]);
+    }
+    $scope.arrangements = flowersArray;
+    console.log(flowersArray);
+  });
 });

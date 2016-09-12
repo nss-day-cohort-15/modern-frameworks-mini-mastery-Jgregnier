@@ -1,0 +1,22 @@
+<h1>Our Flower Arrangemetns</h1>
+
+<h1>Holiday</h1>
+<ul ng-repeat="arrangement in arrangements | filter : {'category' : 'holiday'}">
+  <li>{{arrangement.title}}</li>
+  <li>{{arrangement.description}}</li>
+  <li>{{arrangement.price}}</li>
+</ul>
+
+<h1>Bereavement</h1>
+<ul ng-repeat="arrangement in arrangements | filter : {'category' : 'bereavement'}">
+  <li>{{arrangement.title}}</li>
+  <li>{{arrangement.description}}</li>
+  <li>{{arrangement.price}}</li>
+</ul>
+
+<h1>Misc</h1>
+<ul ng-repeat="arrangement in arrangements | filter : {'category' : 'misc'}">
+  <li>{{arrangement.title}}</li>
+  <li>{{arrangement.description}}</li>
+  <li>{{arrangement.price}}</li>
+</ul>

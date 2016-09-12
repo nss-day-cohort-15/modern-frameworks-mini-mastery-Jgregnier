@@ -3,12 +3,21 @@
 <head>
   <title>Flowers pop mastery exercise</title>
 </head>
-<body>
+<body ng-app="FlowersApp">
 
-<div ng-view>
-
+<div class="col-md-12" ng-view>
 </div>
 
+<!--Third Party -->
 <script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<!-- App module -->
+<script src="app/app.js"></script>
+<!-- Controller -->
+<script src="app/controllers/ArrangementsCtrl.js"></script>
+<!-- Factory -->
+<script src="app/factories/FlowerFactory.js"></script>
+<script src="/app/values/Creds.js"></script>
+
 </body>
 </html>

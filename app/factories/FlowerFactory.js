@@ -1,11 +1,15 @@
 "use strict";
 
-app.factory('FlowerFactory', function($q, $http){
+app.factory('FlowerFactory', function($q, $http, Creds){
 
-  let getFlowers = function () {
-    return $q((resolve,reject) {
+  let getArrangements = function () {
+    return $q((resolve,reject) => {
+      $http.get("https://flower-power-angular.firebaseio.com/arrangements.json")
+      .success((data) => {
+        resolve(data);
+      });
+    });
+  };
 
-    })
-  }
-  return {getFlowers};
+  return {getArrangements};
 });
