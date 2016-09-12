@@ -1,6 +1,6 @@
 "use strict";
 
-app.factory('FlowerFactory', function($q, $http, Creds){
+app.factory('FlowerFactory', function($q, $http){
 
   let getArrangements = function () {
     return $q((resolve,reject) => {
